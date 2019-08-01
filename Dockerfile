@@ -24,6 +24,7 @@ RUN apk update && apk add --no-cache \
     libx11 \
     qt5-qtbase-x11 \
     qt5-qtx11extras \
+    libpulse \
     zlib \
     expect \
     bash \
