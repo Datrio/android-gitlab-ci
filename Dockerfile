@@ -59,7 +59,9 @@ RUN mv /bin/sh /bin/sh.backup \
   && cp /bin/bash /bin/sh
 
 COPY android-wait-for-emulator /usr/local/bin/android-wait-for-emulator
+RUN chmod +x /usr/local/bin/android-wait-for-emulator
 COPY assure_emulator_awake.sh /usr/local/bin/assure_emulator_awake.sh
+RUN chmod +x /usr/local/bin/assure_emulator_awake.sh
 
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
 RUN yes | ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-${VERSION_TARGET_SDK}"
