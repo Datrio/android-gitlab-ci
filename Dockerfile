@@ -21,6 +21,9 @@ RUN apk update && apk add --no-cache \
     tar \
     unzip \
 #    libstdc++6 \
+    libx11 \
+    qt5-qtbase-x11 \
+    qt5-qtx11extras \
     zlib \
     expect \
     bash \
